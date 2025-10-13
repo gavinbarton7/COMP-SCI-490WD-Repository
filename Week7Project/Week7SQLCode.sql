@@ -34,12 +34,6 @@ SELECT name, membership_level FROM Customers;
 
 SELECT movie_title, rental_price FROM Rentals;
 
-SELECT 
-    c.id AS customer_id,
-    c.name,
-    c.membership_level,
-    r.id AS rental_id,
-    r.movie_title,
-    r.rental_price
+SELECT c.id AS customer_id, c.name, c.membership_level, r.id AS rental_id, r.movie_title, r.rental_price
 FROM customers c
 JOIN rentals r ON c.id = r.customer_id;
